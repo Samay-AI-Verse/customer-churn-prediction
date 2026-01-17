@@ -57,6 +57,76 @@ An AI-powered customer churn prediction system that helps businesses identify at
 3. Review the prediction, confidence score, and recommendations
 4. Take action based on the insights!
 
+## 🐳 Docker Deployment
+
+### Option 1: Docker Compose (Recommended)
+
+Run both Gradio UI and FastAPI with one command:
+
+```bash
+docker-compose up -d
+```
+
+- **Gradio UI**: http://localhost:7860
+- **FastAPI**: http://localhost:8000
+
+### Option 2: Docker Build & Run
+
+Build the image:
+```bash
+docker build -t churn-prediction .
+```
+
+Run Gradio UI:
+```bash
+docker run -p 7860:7860 churn-prediction
+```
+
+Run FastAPI:
+```bash
+docker run -p 8000:8000 churn-prediction python -m uvicorn main:app --host 0.0.0.0 --port 8000
+```
+
+### Stop Services
+
+```bash
+docker-compose down
+```
+
+## 🚀 Local Development
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run Gradio UI
+
+```bash
+python app.py
+```
+
+### Run FastAPI
+
+```bash
+python -m uvicorn main:app --reload
+```
+
+## 📁 Project Structure
+
+```
+├── app.py                 # Gradio UI application
+├── main.py               # FastAPI application
+├── requirements.txt      # Python dependencies
+├── Dockerfile           # Docker configuration
+├── docker-compose.yml   # Multi-service Docker setup
+├── .gitignore          # Git ignore rules
+├── .dockerignore       # Docker ignore rules
+├── example_request.json # Sample API request
+└── README.md           # This file
+```
+
 ## 👨‍💻 Developer
 
 Built by Samay | [GitHub](https://github.com/Samay-AI-Verse)
