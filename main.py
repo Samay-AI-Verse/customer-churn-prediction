@@ -35,8 +35,7 @@ try:
     logger.info("Model loaded successfully.")
 except Exception as e:
     logger.error(f"Model loading failed: {e}")
-    logger.error(f"Repo: {MODEL_REPO}, File: {MODEL_FILE}")
-    raise  # Re-raise the original exception to see the actual error
+    raise RuntimeError("Failed to load model. Check HF repo and file name.")
 
 
 # -----------------------------
