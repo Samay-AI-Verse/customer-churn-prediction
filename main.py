@@ -17,8 +17,8 @@ logger = logging.getLogger(__name__)
 # App Initialization
 # -----------------------------
 app = FastAPI(
-    title="Customer Churn Prediction API",
-    description="Production-ready ML API for predicting customer churn",
+    title="Customer Retention Prediction API",
+    description="AI-powered API to predict customer loyalty and retention risk",
     version="1.0.0",
 )
 
@@ -83,7 +83,11 @@ class CustomerData(BaseModel):
 # -----------------------------
 @app.get("/")
 def home():
-    return {"project": "Customer Churn Prediction System", "status": "running"}
+    return {
+        "project": "Customer Retention Prediction System",
+        "status": "running",
+        "info": "Predict whether customers will stay or leave using AI",
+    }
 
 
 @app.get("/health")
