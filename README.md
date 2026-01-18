@@ -213,6 +213,25 @@ curl -X POST "http://localhost:8000/predict" \
 - **Features**: 10 customer attributes
 - **Output**: Binary prediction (0=Stay, 1=Leave) + Probability score
 
+### Model Performance
+
+The model demonstrates excellent performance with strong generalization:
+
+| Metric | Score |
+|--------|-------|
+| **Accuracy** | 95.40% |
+| **Precision** | 99.99% |
+| **Recall** | 91.92% |
+| **F1-Score** | 95.79% |
+| **Training Score** | 95.49% |
+| **Test Score** | 95.40% |
+
+**Key Insights:**
+- High precision (99.99%) means very few false positives - when the model predicts churn, it's almost always correct
+- Strong recall (91.92%) ensures we catch most customers who will actually churn
+- Minimal gap between training and test scores indicates excellent generalization with no overfitting
+- Overall accuracy of 95.4% makes this model reliable for real-world business decisions
+
 ---
 
 ## 🌐 Deployment
@@ -296,10 +315,11 @@ MIT License - See LICENSE file for details
 
 ## 🎯 Quick Links
 
-- 🚀 **[Live Demo](https://huggingface.co/spaces/Samay-Verse/Customer-Churn-Prediction)** ← Try it now!
-- 📚 **[API Documentation](http://localhost:8000/docs)** (when running locally)
-- 🤖 **[Model on Hugging Face](https://huggingface.co/Samay-Verse/Customer-Churn-Prediction-Model)**
-- 💻 **[GitHub Repository](https://github.com/Samay-AI-Verse/customer-churn-prediction)**
+- 🚀 **[Live Demo](https://huggingface.co/spaces/Samay-Verse/Customer-Churn-Prediction)** - Try it now!
+- 📚 **[API Documentation](http://localhost:8000/docs)** - When running locally
+- 🤖 **[Model on Hugging Face](https://huggingface.co/Samay-Verse/Customer-Churn-Prediction-Model)** - Pre-trained model
+- 💻 **[GitHub Repository](https://github.com/Samay-AI-Verse/customer-churn-prediction)** - Source code
+- 📓 **[Jupyter Notebook](YOUR_NOTEBOOK_LINK_HERE)** - Model training & evaluation
 
 ---
 
