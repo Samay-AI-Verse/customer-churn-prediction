@@ -1,3 +1,14 @@
+---
+title: Customer Churn Prediction System
+emoji: 🤖
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_file: Dockerfile
+pinned: false
+---
+
+
 # Customer Churn Prediction
 
 A friendly, easy-to-understand project to predict which customers are likely to leave (churn) so a business can intervene early. This README is written for two main audiences: beginners who want to run and learn from the code, and HR/interviewers who want a clear, non-technical summary of the project's goals, value, and how to evaluate contributions.
